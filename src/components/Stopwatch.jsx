@@ -24,18 +24,18 @@ export default function Stopwatch() {
   return (
     <div  className='min-h-screen flex flex-col items-center justify-center bg-slate-900  gap-10'>
 
-    <div className='text-9xl font-semibold text-white'>
+    <div className='text-4xl md:text-8xl lg:text-10xl font-semibold text-white'>
       <span >{("0" + Math.floor((time/60000)%60)).slice(-2)}:</span>
       <span>{("0" + Math.floor((time/1000)%60)).slice(-2)}:</span>
       <span>{("0" + Math.floor((time/100)%60)).slice(-2)}</span>
       
     </div>
     <div className='flex justify-between gap-10'>
-      {running ? (<button  className='uppercase font-semibold p-10 bg-slate-200 rounded-xl text-5xl hover:bg-orange-400'
+      {running ? (<button  className='uppercase font-semibold p-4 md:p-8 lg:p-10 bg-slate-200 rounded-xl lg:text-5xl md:text-4xl sm:text-3xl hover:bg-orange-400'
        onClick={()=>{setRunning(false)}}>Stop</button>):
-      (<button className='uppercase font-semibold p-10 bg-slate-200 rounded-xl text-5xl hover:bg-orange-400'
+      (<button className='uppercase font-semibold p-4 md:p-8 lg:p-10 bg-slate-200 rounded-xl lg:text-5xl md:text-4xl sm:text-3xl hover:bg-orange-400'
       onClick={()=>{setRunning(true)}}>Start</button>)}
-      <button  className='uppercase font-semibold p-10 bg-slate-200 rounded-xl text-5xl hover:bg-orange-400'
+      <button  className='uppercase font-semibold p-4 md:p-8 lg:p-10 bg-slate-200 rounded-xl lg:text-5xl md:text-4xl sm:text-3xl hover:bg-orange-400'
       onClick={()=>{setTime(0)}}>Reset</button>
     </div>
   </div>
